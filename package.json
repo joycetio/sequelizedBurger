@@ -1,0 +1,28 @@
+{
+  "name": "sequelized-burger",
+  "version": "1.0.0",
+  "description": "A burger logger application using Sequelize. ",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joycetio/sequelizedBurger.git"
+  },
+  "author": "Joyce Tio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joycetio/sequelizedBurger/issues"
+  },
+  "homepage": "https://github.com/joycetio/sequelizedBurger#readme"
+}
