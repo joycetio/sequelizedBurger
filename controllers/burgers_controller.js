@@ -8,18 +8,20 @@ module.exports = function(app) {
     router.get('/', function(req, res) {
         model.Burger.findAll({})
             .then(function(burgerData) {
+
                 var handlebarsObj = {
-                    Burger: burgerData
+                    Burgers: burgerData
                 };
-                console.log("handlebarsObj: ", handlebarsObj);
+
+                // console.log("handlebarsObj: ", handlebarsObj);
                 res.render("index", handlebarsObj);
             });
     });
 
     router.post("/", function(req, res) {
+
         model.Burger.create({
-                burger_name: req.body.burger_name,
-                devoured: req.body.devoured
+                burger_name: req.body.burgerUserInput,
             })
             .then(function(burgerData) {
                 res.redirect("/");
