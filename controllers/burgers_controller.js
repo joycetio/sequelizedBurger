@@ -12,8 +12,7 @@ module.exports = function(app) {
                 var handlebarsObj = {
                     Burgers: burgerData
                 };
-
-                // console.log("handlebarsObj: ", handlebarsObj);
+                
                 res.render("index", handlebarsObj);
             });
     });

@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 
-app.use(express.static(process.cwd() + "./public"));
+app.use(express.static(process.cwd() + "/public"));
 
 app.use(methodOverride("_method"));
 
@@ -24,6 +24,7 @@ app.use(methodOverride("_method"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+//routes
 var routes = require("./controllers/burgers_controller.js")
 
 app.use("/", routes(app));
