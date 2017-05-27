@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-4 col-lg-offset-4">
-			<img class="img-responsive" src="assets/img/burger.png">
+			<img class="img-responsive" src="public/assets/img/burger.png">
 		</div>
 		<div class="col-lg-6 col-lg-offset-3">
 			<br>
@@ -34,13 +34,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                        {{#each burgers}}
-                        {{#unless this.DEVOURED}}
+                        {{#each Burger}}
+                        {{#unless this.devoured}}
                         <tr>
-                        	<td>{{this.ID}}</td>
-                        	<td>{{this.BURGER_NAME}}</td>
+                        	<td>{{this.id}}</td>
+                        	<td>{{this.burger_name}}</td>
                         	<td class="text-right">
-                        		<form action="/{{this.ID}}?_method=PUT" method="POST">
+                        		<form action="/{{this.id}}?_method=PUT" method="POST">
                         			<input type="hidden" name="DEVOURED" value="true">
                         			<button class="btn btn-primary btn-sm" type="submit">Devour Burger</button>
                         		</form>
@@ -68,11 +68,11 @@
         						</tr>
         					</thead>
         					<tbody>
-        						{{#each burgers}}
-        							{{#if this.DEVOURED}}
+        						{{#each Burger}}
+        							{{#if this.devoured}}
         							<tr>
-        								<td>{{this.ID}}</td>
-        								<td>{{this.BURGER_NAME}}</td>
+        								<td>{{this.id}}</td>
+        								<td>{{this.burger_name}}</td>
         							</tr>
         							{{/if}}
         						{{/each}}
